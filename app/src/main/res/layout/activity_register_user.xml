@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#253334"
+    tools:context=".registerUser">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homePageBanner"
+        android:text="Sign Up"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homePageBanner"
+        android:text="Sign up now for free and start\nsleeping well."
+        android:id="@+id/slogan_signup"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        >
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="true"
+        android:id="@+id/nameField"
+        android:textStyle="italic"
+        android:textSize="16dp"
+        android:layout_marginTop="50dp"
+        android:textColorHint="@color/white"
+        android:layout_below="@+id/slogan_signup"
+        android:hint="Name"></EditText>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="true"
+        android:id="@+id/rEmailField"
+        android:layout_marginTop="30dp"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/nameField"
+        android:textColorHint="@color/white"
+        android:hint="Email Address"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="true"
+        android:id="@+id/rPasswordField"
+        android:textColorHint="@color/white"
+        android:textSize="16dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="italic"
+        android:inputType="textPassword"
+        android:layout_below="@+id/rEmailField"
+        android:hint="Password"></EditText>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/registerBtn"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:layout_below="@id/rPasswordField"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:fontFamily="serif"
+        android:background="@drawable/mybutton_style"
+        android:textColor="@color/white"
+        android:text="SIGNUP"></Button>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminateDrawable="@drawable/progress"
+        android:id="@+id/registerProgress"
+        android:visibility="gone"
+        android:layout_below="@+id/rEmailField"
+        android:layout_centerHorizontal="true"
+        android:scrollbarSize="50dp"
+        ></ProgressBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerBtn"
+        android:text="Already have an account?"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/already_text"
+        android:layout_marginTop="18dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerBtn"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:layout_toRightOf="@+id/already_text"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/rSigninBtn"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"></TextView>
+
+
+</RelativeLayout>

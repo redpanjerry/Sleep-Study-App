@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10236471134",
+    "project_id": "hwsw-lab2",
+    "storage_bucket": "hwsw-lab2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10236471134:android:3e64dc89c0cb58f2e9d1cf",
+        "android_client_info": {
+          "package_name": "com.example.hwsw_lab2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10236471134-7lfqi3a64nao1kdfe6hh2udmlcsn8org.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZTVFbYAU1wjhAZEPkQpKl-0sxwnzE3zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10236471134-7lfqi3a64nao1kdfe6hh2udmlcsn8org.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

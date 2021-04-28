@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#253334"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_title"
+        android:text="Sign In"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_title"
+        android:text="Sign in now to access your sleep\nstatistics."
+        android:id="@+id/slogan_signin"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        >
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailField"
+        android:layout_marginTop="70dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:layout_below="@+id/slogan_signin"
+        android:hint="Email Address"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordField"
+        android:layout_marginTop="25dp"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:layout_below="@+id/emailField"
+        android:hint="Password"></EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgetPassword"
+        android:layout_below="@id/passwordField"
+        android:layout_alignRight="@+id/passwordField"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        android:layout_marginLeft="40dp"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"></TextView>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/sLoginBtn"
+        android:layout_below="@id/passwordField"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/mybutton_style"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        android:textSize="18dp"
+        android:text="Login"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sDontHave"
+        android:layout_below="@id/sLoginBtn"
+        android:text="Don't have an account?"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sSignupBtn"
+        android:layout_below="@id/sLoginBtn"
+        android:layout_toRightOf="@id/sDontHave"
+        android:text="Sign Up"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        ></TextView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/loginProgress"
+        android:visibility="gone"
+        android:layout_below="@+id/emailField"
+        android:layout_centerHorizontal="true"
+        android:scrollbarSize="50dp"></ProgressBar>
+
+
+</RelativeLayout>
