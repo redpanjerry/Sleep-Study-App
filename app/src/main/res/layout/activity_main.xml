@@ -41,6 +41,7 @@
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textStyle="italic"
+        android:imeOptions="actionDone"
         android:layout_below="@+id/slogan_signin"
         android:hint="Email Address"></EditText>
 
@@ -52,6 +53,7 @@
         android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:imeOptions="actionDone"
         android:textStyle="italic"
         android:layout_below="@+id/emailField"
         android:hint="Password"></EditText>
