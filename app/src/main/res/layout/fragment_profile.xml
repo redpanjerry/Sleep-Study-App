@@ -7,6 +7,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.ProfileFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_marginLeft="20dp"
@@ -39,7 +48,7 @@
         android:id="@+id/profile_image"
         android:layout_width="150dp"
         android:layout_height="196dp"
-        android:src="@drawable/jerry2"
+        android:src="@drawable/jerry"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"/>
 
@@ -54,6 +63,69 @@
         android:layout_marginTop="50dp"
         android:id="@+id/profile_setgoal"></TextView>
 
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/profile_setgoal"
+                android:text="Night Time Sleep Hours"
+                android:layout_marginTop="10dp"
+                android:id="@+id/profile_sleepHourText"></TextView>
+
+            <EditText
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/profile_sleepHourText"
+                android:background="@drawable/rounded_corner_text"
+                android:hint="Text"
+                android:paddingLeft="10dp"
+                android:id="@+id/profile_editTxtNightSleepHour"></EditText>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/profile_editTxtNightSleepHour"
+                android:text="Night Time Sleep Hours"
+                android:layout_marginTop="35dp"
+                android:id="@+id/profile_bedTime"></TextView>
+
+            <Spinner
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/profile_bedTime"
+                android:background="@drawable/rounded_corner_text"
+                android:hint="Text"
+                android:paddingLeft="10dp"
+                android:entries="@array/sleepHours_arrays"
+                android:id="@+id/profile_editBedtimeTarget"></Spinner>
 
 
+
+
+
+
+
+<!--        <Button-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:id="@+id/profile_logOut"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_below="@+id/profile_setgoal"-->
+<!--            android:text="Logout" >-->
+<!--        </Button>-->
+
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
