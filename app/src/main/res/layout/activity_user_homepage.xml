@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +11,9 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/menu"
         android:background="#253334"
         app:itemIconTint="@color/white"
@@ -23,29 +23,10 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/bottom_navigation"
-        android:layout_toLeftOf="@+id/bottom_navigation"></FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        ></FrameLayout>
 
-    <TextView
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="27dp"
-        android:textColor="@color/white"
-        android:text="Welcome back,"
-        android:layout_marginTop="50dp"
-        android:id="@+id/welcomeBack"></TextView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="27dp"
-        android:textColor="@color/white"
-        android:layout_marginTop="50dp"
-        android:layout_toRightOf="@+id/welcomeBack"
-        android:id="@+id/user_name"
-        android:text="username"
-        android:layout_marginLeft="10dp"></TextView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

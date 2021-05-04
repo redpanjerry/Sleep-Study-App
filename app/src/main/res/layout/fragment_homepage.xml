@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#253334"
     tools:context=".fragment.HomepageFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:textColor="@color/white"
+        android:text="Welcome back,"
+        android:layout_marginTop="50dp"
+        android:id="@+id/welcomeBack"></TextView>
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/welcomeBack"
+        android:id="@+id/user_name"
+        android:text="username"
+        android:layout_marginLeft="10dp"></TextView>
+
+</RelativeLayout>

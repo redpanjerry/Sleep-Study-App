@@ -1,7 +1,13 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+
 }
+
+
+
 
 android {
     compileSdkVersion 30
@@ -37,6 +43,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:20.0.4'
     implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
