@@ -15,7 +15,7 @@
         android:textSize="27dp"
         android:textColor="@color/white"
         android:text="Welcome back,"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/welcomeBack"></TextView>
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textSize="27dp"
         android:textColor="@color/white"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/welcomeBack"
         android:id="@+id/user_name"
         android:text="username"
@@ -35,7 +35,7 @@
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:id="@+id/main_view"
-        android:layout_margin="10dp"
+
         app:cardBackgroundColor="@color/white"
         android:layout_below="@+id/user_name"
         app:cardMaxElevation="12dp"
@@ -57,16 +57,16 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_sleep"
+            android:layout_height="25dp"
+            android:src="@drawable/vector"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="20dp"></ImageView>
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_sun"
-            android:layout_marginTop="50dp"
+            android:layout_height="33dp"
+            android:src="@drawable/union"
+            android:layout_marginTop="45dp"
             android:layout_marginLeft="180dp"></ImageView>
 
     <ImageView
@@ -81,48 +81,83 @@
 
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:padding="20dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/main_view"
+        android:padding="20dp"
+        android:id="@+id/first_row_button"
         >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="2">
+        <View android:id="@+id/fakeView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="20dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardMaxElevation="12dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:weight="1"
-                >
+        <ImageButton
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sleep Quality Stats"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
-            </androidx.cardview.widget.CardView>
+            android:background="#253334"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/fakeView"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/sleep_quality_status"
+            android:text="Left" />
 
-        </LinearLayout>
+        <ImageButton
+            android:background="#253334"
+            android:src="@drawable/sleep_environment"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/fakeView"
+            android:layout_alignParentRight="true"
+            android:text="Right"/>
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_row_button"
+        android:padding="20dp"
+        android:id="@+id/second_row_button"
+        >
+
+        <View android:id="@+id/fakeView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageButton
+
+            android:background="#253334"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/fakeView2"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bedtime_routine"
+            android:text="Left" />
+
+        <ImageButton
+            android:background="#253334"
+            android:src="@drawable/other_factors"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/fakeView2"
+            android:layout_alignParentRight="true"
+            android:text="Right"/>
+
+    </RelativeLayout>
+
+
+
 
 
 </RelativeLayout>
