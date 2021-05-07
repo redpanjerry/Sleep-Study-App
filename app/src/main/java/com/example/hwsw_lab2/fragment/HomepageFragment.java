@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.hwsw_lab2.R;
 
@@ -48,12 +49,16 @@ public class HomepageFragment extends Fragment {
         return fragment;
     }
 
+    private ImageButton sleep_quality_status, sleep_environment, bedtime_routine, other_factors;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -62,5 +67,8 @@ public class HomepageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_homepage, container, false);
+
+
+
     }
 }

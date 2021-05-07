@@ -31,7 +31,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="340dp"
+        android:layout_height="300dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:id="@+id/main_view"
@@ -71,10 +71,10 @@
 
     <ImageView
         android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_height="140dp"
         android:layout_marginLeft="160dp"
         android:src="@drawable/happy_cactus"
-        android:id="@+id/main_cactus_status"
+        android:id="@+id/cactus_status"
         android:layout_marginTop="100dp"></ImageView>
 
     </androidx.cardview.widget.CardView>
@@ -84,7 +84,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_view"
-        android:padding="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:id="@+id/first_row_button"
         >
 
@@ -94,7 +95,7 @@
             android:layout_centerInParent="true"/>
 
         <ImageButton
-
+            android:id="@+id/sleep_quality_Btn"
             android:background="#253334"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
@@ -106,6 +107,7 @@
             android:text="Left" />
 
         <ImageButton
+            android:id="@+id/sleep_environment_Btn"
             android:background="#253334"
             android:src="@drawable/sleep_environment"
             android:scaleType="fitCenter"
@@ -122,7 +124,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/first_row_button"
-        android:padding="20dp"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:id="@+id/second_row_button"
         >
 
@@ -132,7 +136,7 @@
             android:layout_centerInParent="true"/>
 
         <ImageButton
-
+            android:id="@+id/bedtime_routine_Btn"
             android:background="#253334"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
@@ -144,6 +148,7 @@
             android:text="Left" />
 
         <ImageButton
+            android:id="@+id/other_factors_Btn"
             android:background="#253334"
             android:src="@drawable/other_factors"
             android:scaleType="fitCenter"
