@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#253334"
+    android:id="@+id/user_homepage_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomepageFragment">
 
@@ -26,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/welcomeBack"
         android:id="@+id/user_name"
-        android:text="username"
+        android:text="Jerry"
         android:layout_marginLeft="10dp"></TextView>
 
     <androidx.cardview.widget.CardView
@@ -60,7 +61,26 @@
             android:layout_height="25dp"
             android:src="@drawable/vector"
             android:layout_marginTop="50dp"
+            android:id="@+id/wake_image"
             android:layout_marginLeft="20dp"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="2:45 AM"
+            android:textSize="20dp"
+            android:layout_marginLeft="65dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="9:07 AM"
+            android:textSize="20dp"
+            android:layout_marginLeft="225dp"
+            android:textStyle="bold"></TextView>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -72,10 +92,27 @@
     <ImageView
         android:layout_width="170dp"
         android:layout_height="140dp"
-        android:layout_marginLeft="160dp"
+        android:layout_marginLeft="180dp"
         android:src="@drawable/happy_cactus"
         android:id="@+id/cactus_status"
         android:layout_marginTop="100dp"></ImageView>
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/sleep_ring"
+            android:id="@+id/sleep_ring"
+            android:layout_marginTop="100dp"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="153dp"
+            android:text="5h : 2min "
+            android:textSize="23dp"
+            android:layout_marginLeft="48dp"
+            android:textStyle="bold"></TextView>
 
     </androidx.cardview.widget.CardView>
 

@@ -3,16 +3,19 @@ package com.example.hwsw_lab2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.hwsw_lab2.fragment.HomepageFragment;
 import com.example.hwsw_lab2.fragment.ProfileFragment;
+import com.example.hwsw_lab2.fragment.Sleep_status;
 import com.example.hwsw_lab2.fragment.SurveyFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserHomepage extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,13 @@ public class UserHomepage extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomepageFragment()).commit();
         }
+//
+//        HomepageFragment homepageFragment = new HomepageFragment();
+//        FragmentManager fm = getSupportFragmentManager();
+//
+//        fm.beginTransaction().add(R.id.user_homepage_layout, homepageFragment).commit();
+
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -45,6 +55,7 @@ public class UserHomepage extends AppCompatActivity {
                 case R.id.ic_survey:
                     selectedFragment = new SurveyFragment();
                     break;
+
             }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

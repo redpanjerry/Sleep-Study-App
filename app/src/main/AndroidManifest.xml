@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hwswlab2"
         android:windowSoftInputMode="stateHidden">
-        <activity android:name=".UserHomepage"></activity>
+        <activity android:name=".UserHomepage" />
         <activity android:name=".registerUser" />
         <activity android:name=".MainActivity" />
         <activity android:name=".HomePage">
