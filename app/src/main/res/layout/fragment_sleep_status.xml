@@ -15,43 +15,52 @@
         android:textSize="27dp"
         android:textColor="@color/white"
         android:text="Sleep Session"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/sleep_session_title"></TextView>
 
-    <ToggleButton
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:background="@drawable/day_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sleep_session_title"
+        ></ImageButton>
+
+    <Button
         android:id="@+id/toggle_sleep_day"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sleep_session_title"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/new_button_style"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textOff="Day"
-        android:textOn="Week"></ToggleButton>
+        ></Button>
 
-    <ToggleButton
-        android:layout_width="140dp"
+    <Button
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:id="@+id/toggle_sleep_week"
-        android:textOff="Week"
-        android:textOn="Day"
         android:textAllCaps="false"
         android:layout_below="@+id/sleep_session_title"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:layout_toRightOf="@+id/toggle_sleep_day"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/new_button_style"
-        ></ToggleButton>
+        android:background="@android:color/transparent"
+        ></Button>
+
+
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toggle_sleep_day"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:id="@+id/first_row_button"
         android:layout_marginTop="20dp"
         >
@@ -66,46 +75,68 @@
             android:background="#253334"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_alignRight="@id/fakeView"
-            android:layout_alignParentLeft="true"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/sleep_duration"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/sleep_goal_img"
+            android:layout_marginTop="-5dp"
             android:text="Left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5h 0m"
+            android:text=""
             android:textColor="@color/white"
-            android:textSize="23dp"
+            android:textSize="17dp"
             android:textStyle="bold"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="30dp"></TextView>
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="70dp"></TextView>
+
 
         <ImageView
-            android:id="@+id/sleep_environment_Btn"
+            android:id="@+id/awakenings_Btn2"
             android:background="#253334"
-            android:src="@drawable/sleep_goal"
+            android:src="@drawable/duration_img"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_marginLeft="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/fakeView"
-            android:layout_alignParentRight="true"
+            android:layout_width="140dp"
+            android:layout_height="95dp"
+            android:layout_centerInParent="true"
             android:text="Right"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7h 0m"
+            android:text=""
             android:textColor="@color/white"
-            android:textSize="23dp"
+            android:textSize="17dp"
             android:textStyle="bold"
-            android:layout_marginLeft="225dp"
-            android:layout_marginTop="30dp"></TextView>
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="70dp"></TextView>
+
+        <ImageView
+            android:id="@+id/sleep_environment_Btn"
+            android:background="#253334"
+            android:src="@drawable/awake_time_img"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="70dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="-5dp"
+            android:layout_alignLeft="@id/fakeView"
+            android:text="Right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="285dp"
+            android:layout_marginTop="70dp"></TextView>
 
     </RelativeLayout>
 
@@ -113,10 +144,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/first_row_button"
-        android:layout_marginTop="25dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:id="@+id/second_row_button"
+
         >
 
         <View android:id="@+id/fakeView2"
@@ -125,70 +156,43 @@
             android:layout_centerInParent="true"/>
 
         <ImageView
-            android:id="@+id/bedtime_routine_Btn"
+            android:id="@+id/awakenings_Btn"
             android:background="#253334"
+            android:src="@drawable/awakenings_img"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_alignRight="@id/fakeView2"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/bedtime"
-            android:text="Left" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6h 22m"
-            android:textColor="@color/white"
-            android:textSize="23dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="30dp"></TextView>
-
-        <ImageView
-            android:id="@+id/other_factors_Btn"
-            android:background="#253334"
-            android:src="@drawable/time_awake"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_alignLeft="@id/fakeView2"
-            android:layout_alignParentRight="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
             android:text="Right"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1h 22m"
+            android:text=""
             android:textColor="@color/white"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_marginLeft="219dp"
-            android:layout_marginTop="30dp"></TextView>
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="55dp"></TextView>
 
     </RelativeLayout>
 
     <TextView
-        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="27dp"
+        android:layout_below="@+id/second_row_button"
+        android:text="Sleep Graph"
         android:textColor="@color/white"
-        android:text="Bedtime"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/second_row_button"
-        android:id="@+id/bedtime_title"></TextView>
+        android:textSize="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/sleep_graph_txt"></TextView>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bedtime_title"
-        android:layout_marginTop="-80dp"
-        android:src="@drawable/bedtime_chart" />
+
+
+
 
 
 

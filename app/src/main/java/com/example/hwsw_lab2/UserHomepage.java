@@ -52,7 +52,7 @@ public class UserHomepage extends AppCompatActivity {
                     selectedFragment = new ProfileFragment();
                     break;
 
-                case R.id.ic_survey:
+                case R.id.ic_black_panther:
                     selectedFragment = new SurveyFragment();
                     break;
 

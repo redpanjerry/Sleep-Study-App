@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#253334"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.sleep_status_week">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:textColor="@color/white"
+        android:text="Sleep Session"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sleep_session_title"></TextView>
+
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:background="@drawable/week_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sleep_session_title"
+        ></ImageButton>
+
+    <Button
+        android:id="@+id/toggle_sleep_day"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sleep_session_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        ></Button>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_sleep_week"
+        android:textAllCaps="false"
+        android:layout_below="@+id/sleep_session_title"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/toggle_sleep_day"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        ></Button>
+            </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggle_sleep_day"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/first_row_button"
+        android:layout_marginTop="20dp"
+        >
+
+        <View android:id="@+id/fakeView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/sleep_quality_Btn"
+            android:background="#253334"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignRight="@id/fakeView"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/sleep_goal_img"
+            android:layout_marginTop="-5dp"
+            android:text="Left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="70dp"></TextView>
+
+
+        <ImageView
+            android:id="@+id/awakenings_Btn2"
+            android:background="#253334"
+            android:src="@drawable/average_duration_img"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="25dp"
+
+            android:text="Right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="256dp"
+            android:layout_marginTop="70dp"></TextView>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_row_button"
+
+        android:id="@+id/second_row_button"
+
+        >
+
+        <View android:id="@+id/fakeView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/awakenings_Btn"
+            android:background="#253334"
+            android:src="@drawable/total_awakenings_img"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="Right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="55dp"></TextView>
+
+        <ImageView
+            android:id="@+id/average_awakenings_Btn"
+            android:background="#253334"
+            android:src="@drawable/average_awake_img"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@+id/awakenings_Btn"
+            android:text="Right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/awakenings_Btn"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="55dp"></TextView>
+
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/second_row_button"
+                android:id="@+id/insights_layout"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/other_insights"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Insights"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="20sp"
+                        android:id="@+id/insight_title"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/insight_title"
+                        android:text=""
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/insights_layout"
+                >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep Graph"
+        android:textColor="@color/white"
+        android:textSize="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/sleep_graph_txt"></TextView>
+
+
+    <ImageView
+        android:layout_width="420dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sleep_graph_txt"
+        android:background="@drawable/week_duration_img"
+        android:id="@+id/sleep_duration_img"
+        android:layout_marginLeft="10dp"></ImageView>
+
+
+                <ImageView
+                    android:layout_width="420dp"
+                    android:layout_height="260dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/sleep_duration_img"
+                    android:background="@drawable/week_awakenings_img"
+                    android:id="@+id/awakenings_img"
+                    android:layout_marginLeft="10dp"></ImageView>
+
+                <ImageView
+                    android:layout_width="420dp"
+                    android:layout_height="260dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/awakenings_img"
+                    android:background="@drawable/week_awake_img"
+                    android:layout_marginLeft="10dp"></ImageView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

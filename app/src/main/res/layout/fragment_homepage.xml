@@ -32,14 +32,14 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="220dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:id="@+id/main_view"
 
         app:cardBackgroundColor="@color/white"
         android:layout_below="@+id/user_name"
-        app:cardMaxElevation="12dp"
+
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         >
@@ -58,61 +58,196 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:src="@drawable/vector"
-            android:layout_marginTop="50dp"
+            android:layout_height="38dp"
+            android:src="@drawable/going_to_bed_icon"
+            android:layout_marginTop="45dp"
             android:id="@+id/wake_image"
             android:layout_marginLeft="20dp"></ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="2:45 AM"
-            android:textSize="20dp"
+            android:layout_marginTop="43dp"
+            android:text=""
+            android:textSize="16dp"
             android:layout_marginLeft="65dp"
             android:textStyle="bold"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="9:07 AM"
-            android:textSize="20dp"
+            android:layout_marginTop="63dp"
+            android:text="Going to bed"
+            android:textSize="16dp"
+            android:layout_marginLeft="65dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text=""
+            android:textSize="16dp"
+            android:layout_marginLeft="225dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="63dp"
+            android:text="Waking up"
+            android:textSize="16dp"
             android:layout_marginLeft="225dp"
             android:textStyle="bold"></TextView>
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="33dp"
+            android:layout_height="38dp"
             android:src="@drawable/union"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="180dp"></ImageView>
 
-    <ImageView
-        android:layout_width="170dp"
-        android:layout_height="140dp"
-        android:layout_marginLeft="180dp"
-        android:src="@drawable/happy_cactus"
-        android:id="@+id/cactus_status"
-        android:layout_marginTop="100dp"></ImageView>
-
         <ImageView
-            android:layout_width="170dp"
-            android:layout_height="140dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/sleep_ring"
-            android:id="@+id/sleep_ring"
-            android:layout_marginTop="100dp"></ImageView>
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:src="@drawable/sleep_duration_icon"
+            android:layout_marginTop="115dp"
+            android:id="@+id/sleep_duration_icon"
+            android:layout_marginLeft="20dp"></ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="153dp"
-            android:text="5h : 2min "
-            android:textSize="23dp"
-            android:layout_marginLeft="48dp"
+            android:layout_marginTop="113dp"
+            android:text=""
+            android:textSize="16dp"
+            android:layout_marginLeft="65dp"
             android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="133dp"
+            android:text="Sleep Duration"
+            android:textSize="16dp"
+            android:layout_marginLeft="65dp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="58dp"
+            android:src="@drawable/awakenings_icon"
+            android:layout_marginTop="105dp"
+            android:id="@+id/awakenings_icon"
+            android:layout_marginLeft="183dp"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="225dp"
+            android:layout_marginTop="113dp"
+            android:text=""
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="133dp"
+            android:text="Awakenings"
+            android:textSize="16dp"
+            android:layout_marginLeft="225dp"
+            android:textStyle="bold"></TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/main_view2"
+        android:layout_marginTop="220dp"
+
+        app:cardBackgroundColor="@color/white"
+        android:layout_below="@+id/user_name"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left|center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Achievements"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/gold_medal_1"
+            android:src="@drawable/gold_medal">
+        </ImageView>
+
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="140dp"
+            android:id="@+id/gold_medal_2"
+            android:src="@drawable/gold_medal">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="260dp"
+            android:id="@+id/white_medal"
+            android:src="@drawable/white_medal">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Goal 87%"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="110dp"
+            android:id="@+id/sleep_goal_medal_1"></TextView>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="110dp"
+            android:id="@+id/sleep_goal_medal_2"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Goal 100%"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="242dp"
+            android:layout_marginTop="110dp"
+            android:id="@+id/sleep_goal_medal_3"></TextView>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -120,7 +255,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/main_view"
+        android:layout_below="@+id/main_view2"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:id="@+id/first_row_button"
@@ -140,37 +275,8 @@
             android:layout_height="wrap_content"
             android:layout_alignRight="@id/fakeView"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/sleep_quality_status"
+            android:src="@drawable/sleep_stats"
             android:text="Left" />
-
-        <ImageButton
-            android:id="@+id/sleep_environment_Btn"
-            android:background="#253334"
-            android:src="@drawable/sleep_environment"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/fakeView"
-            android:layout_alignParentRight="true"
-            android:text="Right"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/first_row_button"
-        android:layout_marginTop="25dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:id="@+id/second_row_button"
-        >
-
-        <View android:id="@+id/fakeView2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_centerInParent="true"/>
 
         <ImageButton
             android:id="@+id/bedtime_routine_Btn"
@@ -179,24 +285,14 @@
             android:adjustViewBounds="true"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@id/fakeView2"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/bedtime_routine"
+            android:layout_alignLeft="@id/fakeView"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/daily_survey"
             android:text="Left" />
 
-        <ImageButton
-            android:id="@+id/other_factors_Btn"
-            android:background="#253334"
-            android:src="@drawable/other_factors"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/fakeView2"
-            android:layout_alignParentRight="true"
-            android:text="Right"/>
-
     </RelativeLayout>
+
+
 
 
 

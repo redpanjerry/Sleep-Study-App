@@ -5,37 +5,38 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.example.hwsw_lab2.R;
 
 
-public class ProfileFragment extends Fragment {
 
-    private Button edit_profile_btn;
+public class Edit_profile extends Fragment {
+
+
+    private ImageView pika_btn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_edit_profile, container, false);
 
-        edit_profile_btn = (Button) v.findViewById(R.id.profile_editBtn);
+        pika_btn = (ImageView) v.findViewById(R.id.pika_img);
 
-        edit_profile_btn.setOnClickListener(new View.OnClickListener() {
+        pika_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Edit_profile edit_profile = new Edit_profile();
+                Profile2 profile2 = new Profile2();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, edit_profile);
+                transaction.replace(R.id.fragment_container, profile2);
                 transaction.commit();
             }
         });
-
 
         return v;
     }

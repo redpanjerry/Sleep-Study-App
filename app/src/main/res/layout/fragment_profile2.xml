@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#253334"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.Profile2">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="27dp"
+            android:textColor="@color/white"
+            android:text="Profile"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/profile_title"></TextView>
+
+        <Button
+            android:id="@+id/profile_editBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/profile_title"
+            android:background="@android:color/transparent"
+            android:capitalize="none"
+            android:textAllCaps="false"
+            android:text="edit"
+            android:textColor="@color/white"
+            android:textSize="20dp"></Button>
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/profile_editBtn"
+            android:layout_marginTop="0dp"
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="196dp"
+            android:src="@drawable/pika_img"
+            />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="27dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/profile_image"
+            android:text="Jerry Wang"
+            android:layout_marginTop="-20dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/profile_username"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout2"
+        android:layout_below="@+id/layout1">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="27dp"
+            android:textColor="@color/white"
+            android:text="Set Goals"
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_setgoal"></TextView>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/profile_setgoal"
+            android:text="Night Time Sleep Hours"
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_sleepHourText"></TextView>
+
+        <Spinner
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/profile_sleepHourText"
+            android:background="@drawable/rounded_corner_text"
+            android:hint="Text"
+            android:paddingLeft="10dp"
+            android:entries="@array/sleepHours_arrays"
+            android:id="@+id/profile_editBedtimeTarget"></Spinner>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/profile_editBedtimeTarget"
+            android:text="Bedtime Target"
+            android:layout_marginTop="15dp"
+            android:id="@+id/profile_bedTime"></TextView>
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/profile_bedTime"
+            android:background="@drawable/rounded_corner_text"
+            android:hint="10:00"
+            android:paddingLeft="10dp"
+            android:id="@+id/profile_edit"></EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="What would you like to work on for this week?"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:id="@+id/week_goal_txt"
+            android:layout_marginLeft="20dp"></TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Calm Activities"
+            android:id="@+id/calm_avtivities_chk"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Nap"
+            android:id="@+id/nap_chk"
+            android:layout_toRightOf="@+id/calm_avtivities_chk"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Noise"
+            android:id="@+id/noise_chk"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/nap_chk"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Screen Time"
+            android:id="@+id/screen_time_chk"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Lights"
+            android:id="@+id/lights_chk"
+            android:layout_toRightOf="@+id/screen_time_chk"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Exercise"
+            android:id="@+id/exercise_chk"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/nap_chk"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Mindfulness"
+            android:id="@+id/mindfulness_chk"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="75dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/week_goal_txt"
+            android:text="Caffeine"
+            android:id="@+id/caffeine_chk"
+            android:layout_toRightOf="@+id/screen_time_chk"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="75dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"></CheckBox>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+
+

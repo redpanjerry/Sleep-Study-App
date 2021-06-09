@@ -6,90 +6,745 @@
     android:background="#253334"
     tools:context=".fragment.Bedtime_routine">
 
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/survey_title_layout"
+        >
+
     <TextView
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="27dp"
         android:textColor="@color/white"
-        android:text="Bedtime Routine"
-        android:layout_marginTop="30dp"
-        android:id="@+id/bedtime_routine_title"></TextView>
+        android:text="Daily Survey"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/daily_survey_title"></TextView>
+
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/survey_title_layout"
+        android:layout_marginTop="20dp"
+        android:id="@+id/calm_avtivities_survey"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bedtime Routine"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="22dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/goal_tracker_txt"
+
+            />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bedtime_routine_title"
-        android:text="GOAL TRACKER"
         android:textColor="@color/white"
-        android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:textSize="22dp"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/goal_tracker_txt"
-        android:layout_marginTop="40dp"
-        />
+        android:text="Did you focus on calm activities before bed?"
+        android:textSize="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/goal_tracker_txt"
+        android:layout_marginTop="15dp"
+        android:id="@+id/bedtime_routine_survey"></TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/bedtime_routine_survey"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/bedtime_routine_survey1_yes">
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/bedtime_routine_survey"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/bedtime_routine_survey1_no">
+        </CheckBox>
+
+
 
     <ProgressBar
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="20dp"
         android:layout_below="@+id/goal_tracker_txt"
-        android:layout_marginTop="20dp"
-        android:max="100"
-        android:progress="70"
+        android:layout_marginTop="90dp"
+        android:max="70"
+        android:progress="30"
         android:indeterminate="false"
         android:paddingLeft="20dp"
         android:progressDrawable="@drawable/progress_bar_goal"
-        android:id="@+id/goal_tracker_bar"
+        android:id="@+id/bedtime_routine_bar"
         android:paddingRight="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_tracker_bar"
-        android:text="Daily Survey"
-        android:textColor="@color/white"
-        android:textSize="27dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/daily_survey_routine"
-        android:layout_marginTop="40dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bedtime_routine_bar"
+            android:layout_alignTop="@id/bedtime_routine_bar"
+            android:layout_alignRight="@id/bedtime_routine_bar"
+            android:layout_alignBottom="@id/bedtime_routine_bar"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="-1dp"
+            android:background="#00000000"
+            android:text="3/7"
+            android:textColor="@color/white"
+            android:textSize="18dp"></TextView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/daily_survey_routine"
-        android:text="Did you focus on calm activities before bed?"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/daily_survey_routine_q"
-        android:layout_marginTop="20dp"></TextView>
 
-    <CheckBox
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/daily_survey_routine_q"
-        android:textColor="@color/white"
-        android:text="Yes"
-        android:textSize="22dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/routine_survey_yes"
-        android:buttonTint="@color/white"></CheckBox>
+    </RelativeLayout>
 
-    <CheckBox
-        android:layout_width="100dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/daily_survey_routine_q"
-        android:textColor="@color/white"
-        android:text="No"
-        android:textSize="22dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/routine_survey_no"
-        android:layout_toRightOf="@+id/routine_survey_yes"
-        android:buttonTint="@color/white"></CheckBox>
+        android:layout_below="@+id/calm_avtivities_survey"
+        android:layout_marginTop="25dp"
+        android:id="@+id/sleep_env_survey"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Environment"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="22dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/sleep_env_txt"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Did you dim the lights 1-2 hours before bed?"
+            android:textSize="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/sleep_env_txt"
+            android:layout_marginTop="15dp"
+            android:id="@+id/sleep_env_survey1"></TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey1_yes">
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey1_no">
+        </CheckBox>
+
+
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/sleep_env_txt"
+            android:layout_marginTop="90dp"
+            android:max="70"
+            android:progress="20"
+            android:indeterminate="false"
+            android:paddingLeft="20dp"
+            android:progressDrawable="@drawable/progress_bar_goal"
+            android:id="@+id/sleep_env_bar1"
+            android:paddingRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="2/7"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="-3dp"
+            android:layout_alignLeft="@+id/sleep_env_bar1"
+            android:layout_alignTop="@id/sleep_env_bar1"
+            android:layout_alignRight="@id/sleep_env_bar1"
+            android:layout_alignBottom="@id/sleep_env_bar1"
+            android:layout_marginLeft="70dp"
+            ></TextView>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Did you decrease screen time before bed?"
+            android:textSize="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/sleep_env_bar1"
+            android:layout_marginTop="25dp"
+            android:id="@+id/sleep_env_survey2"></TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey2_yes">
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey2_no">
+        </CheckBox>
+
+
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/sleep_env_bar1"
+            android:layout_marginTop="95dp"
+            android:max="70"
+            android:progress="20"
+            android:indeterminate="false"
+            android:paddingLeft="20dp"
+            android:progressDrawable="@drawable/progress_bar_goal"
+            android:id="@+id/sleep_env_bar2"
+            android:paddingRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="2/7"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="-3dp"
+            android:layout_alignLeft="@+id/sleep_env_bar2"
+            android:layout_alignTop="@id/sleep_env_bar2"
+            android:layout_alignRight="@id/sleep_env_bar2"
+            android:layout_alignBottom="@id/sleep_env_bar2"
+            android:layout_marginLeft="70dp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Did you decrease ambient noise before bed?"
+            android:textSize="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/sleep_env_bar2"
+            android:layout_marginTop="25dp"
+            android:id="@+id/sleep_env_survey3"></TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey3_yes">
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey3_no">
+        </CheckBox>
+
+
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/sleep_env_bar2"
+            android:layout_marginTop="95dp"
+            android:max="70"
+            android:progress="60"
+            android:indeterminate="false"
+            android:paddingLeft="20dp"
+            android:progressDrawable="@drawable/progress_bar_goal"
+            android:id="@+id/sleep_env_bar3"
+            android:paddingRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="6/7"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="-3dp"
+            android:layout_alignLeft="@+id/sleep_env_bar3"
+            android:layout_alignTop="@id/sleep_env_bar3"
+            android:layout_alignRight="@id/sleep_env_bar3"
+            android:layout_alignBottom="@id/sleep_env_bar3"
+            android:layout_marginLeft="240dp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Did you decrease ambient noise before bed?"
+            android:textSize="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/sleep_env_bar3"
+            android:layout_marginTop="25dp"
+            android:id="@+id/sleep_env_survey4"></TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey4_yes">
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_below="@+id/sleep_env_survey4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/sleep_env_survey4_no">
+        </CheckBox>
+
+
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/sleep_env_bar3"
+            android:layout_marginTop="95dp"
+            android:max="70"
+            android:progress="50"
+            android:indeterminate="false"
+            android:paddingLeft="20dp"
+            android:progressDrawable="@drawable/progress_bar_goal"
+            android:id="@+id/sleep_env_bar4"
+            android:paddingRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="5/7"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="-3dp"
+            android:layout_alignLeft="@+id/sleep_env_bar4"
+            android:layout_alignTop="@id/sleep_env_bar4"
+            android:layout_alignRight="@id/sleep_env_bar4"
+            android:layout_alignBottom="@id/sleep_env_bar4"
+            android:layout_marginLeft="200dp"
+            ></TextView>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sleep_env_survey"
+            android:layout_marginTop="25dp"
+            android:id="@+id/other_factors_survey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Factors"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="22dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/other_factors_txt"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Did you exercise today?"
+                android:textSize="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/other_factors_txt"
+                android:layout_marginTop="15dp"
+                android:id="@+id/other_factors_survey1"></TextView>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey1_yes">
+            </CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="150dp"
+                android:text="No"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey1_no">
+            </CheckBox>
+
+
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/other_factors_txt"
+                android:layout_marginTop="90dp"
+                android:max="70"
+                android:progress="60"
+                android:indeterminate="false"
+                android:paddingLeft="20dp"
+                android:progressDrawable="@drawable/progress_bar_goal"
+                android:id="@+id/other_factors_bar1"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="6/7"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_marginTop="-3dp"
+                android:layout_alignLeft="@+id/other_factors_bar1"
+                android:layout_alignTop="@id/other_factors_bar1"
+                android:layout_alignRight="@id/other_factors_bar1"
+                android:layout_alignBottom="@id/other_factors_bar1"
+                android:layout_marginLeft="240dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Did you have caffeine after 4:30 PM?"
+                android:textSize="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/other_factors_bar1"
+                android:layout_marginTop="15dp"
+                android:id="@+id/other_factors_survey2"></TextView>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey2_yes">
+            </CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="150dp"
+                android:text="No"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey2_no">
+            </CheckBox>
+
+
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/other_factors_bar1"
+                android:layout_marginTop="90dp"
+                android:max="70"
+                android:progress="50"
+                android:indeterminate="false"
+                android:paddingLeft="20dp"
+                android:progressDrawable="@drawable/progress_bar_goal"
+                android:id="@+id/other_factors_bar2"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="5/7"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_marginTop="-3dp"
+                android:layout_alignLeft="@+id/other_factors_bar2"
+                android:layout_alignTop="@id/other_factors_bar2"
+                android:layout_alignRight="@id/other_factors_bar2"
+                android:layout_alignBottom="@id/other_factors_bar2"
+                android:layout_marginLeft="200dp"
+                ></TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Did you practice mindfulness today?"
+                android:textSize="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/other_factors_bar2"
+                android:layout_marginTop="15dp"
+                android:id="@+id/other_factors_survey3"></TextView>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey3_yes">
+            </CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="150dp"
+                android:text="No"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey3_no">
+            </CheckBox>
+
+
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/other_factors_bar2"
+                android:layout_marginTop="90dp"
+                android:max="70"
+                android:progress="20"
+                android:indeterminate="false"
+                android:paddingLeft="20dp"
+                android:progressDrawable="@drawable/progress_bar_goal"
+                android:id="@+id/other_factors_bar3"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="2/7"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_marginTop="-3dp"
+                android:layout_alignLeft="@+id/other_factors_bar3"
+                android:layout_alignTop="@id/other_factors_bar3"
+                android:layout_alignRight="@id/other_factors_bar3"
+                android:layout_alignBottom="@id/other_factors_bar3"
+                android:layout_marginLeft="70dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Did you take a nap today?"
+                android:textSize="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/other_factors_bar3"
+                android:layout_marginTop="15dp"
+                android:id="@+id/other_factors_survey4"></TextView>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey4"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey4_yes">
+            </CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_below="@+id/other_factors_survey4"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="150dp"
+                android:text="No"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:id="@+id/other_factors_survey4_no">
+            </CheckBox>
+
+
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/other_factors_bar3"
+                android:layout_marginTop="90dp"
+                android:max="70"
+                android:progress="30"
+                android:indeterminate="false"
+                android:paddingLeft="20dp"
+                android:progressDrawable="@drawable/progress_bar_goal"
+                android:id="@+id/other_factors_bar4"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="3/7"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_marginTop="-3dp"
+                android:layout_alignLeft="@+id/other_factors_bar4"
+                android:layout_alignTop="@id/other_factors_bar4"
+                android:layout_alignRight="@id/other_factors_bar4"
+                android:layout_alignBottom="@id/other_factors_bar4"
+                android:layout_marginLeft="100dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="How are you feeling today?"
+                android:textSize="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/other_factors_bar4"
+                android:layout_marginTop="25dp"
+                android:id="@+id/other_factors_survey5"></TextView>
+
+            <Spinner
+                android:layout_width="350dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/other_factors_survey5"
+                android:background="@drawable/rounded_corner_text"
+                android:hint="Text"
+                android:paddingLeft="10dp"
+                android:entries="@array/feeling_daily_arrays"
+                android:id="@+id/other_factors_spn"></Spinner>
+
+        </RelativeLayout>
+
+
+</LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -18,6 +18,13 @@
         <item>11</item>
         <item>12</item>
     </string-array>
+
+    <string-array name="feeling_daily_arrays">
+        <item>Energized</item>
+        <item>Normal</item>
+        <item>Dizzy</item>
+        <item>Sleepy</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -23,9 +23,7 @@ public class HomepageFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_homepage, container, false);
         sleep_session = (ImageButton) v.findViewById(R.id.sleep_quality_Btn);
-        sleep_env = (ImageButton) v.findViewById(R.id.sleep_environment_Btn);
         bedtime_routine = (ImageButton) v.findViewById(R.id.bedtime_routine_Btn);
-        other_factors = (ImageButton) v.findViewById(R.id.other_factors_Btn);
 
         sleep_session.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,25 +46,6 @@ public class HomepageFragment extends Fragment {
             }
         });
 
-        sleep_env.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Sleep_environment sleep_environment = new Sleep_environment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, sleep_environment);
-                transaction.commit();
-            }
-        });
-
-        other_factors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                OtherFactors otherFactors = new OtherFactors();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, otherFactors);
-                transaction.commit();
-            }
-        });
 
         return v;
     }

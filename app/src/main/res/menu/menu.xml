@@ -12,9 +12,9 @@
         android:title="Profile"/>
 
     <item
-        android:id="@+id/ic_survey"
-        android:icon="@drawable/ic_baseline_brightness_3_24"
-        android:title="Survey"/>
+        android:id="@+id/ic_black_panther"
+        android:icon="@drawable/ic_black_panther"
+        android:title="Sign Out"/>
 
 
 </menu>
